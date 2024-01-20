@@ -1,3 +1,7 @@
+# mention the base image
 FROM alpine
+# execute the command while preparing
 RUN apk add --update redis
-CMD ["redis-server"]
+RUN apk add --update gcc
+# execute command while container is ready
+# CMD ["redis-server"]
